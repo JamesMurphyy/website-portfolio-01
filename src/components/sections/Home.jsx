@@ -36,7 +36,7 @@ export const Home = () => {
               className="border border-black/50 text-white py-3 px-6 rounded font-medium transition-all duration-200 
              hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.2)] hover:bg-gray-200/10"
             >
-              Contact Me
+              Contact Me!
             </a>
           </div>
         </div>
