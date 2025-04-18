@@ -17,11 +17,14 @@ export const Home = () => {
           {/* added 'content' to classname for video bg */}
 
           <h1 className="text-3xl md:text-5xl font-bold mb-6 pb-2 bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-transparent leading-right">
-            Debby Murphy Realestate
+            Debby Murphy Real estate
           </h1>
 
           <p className="tex-gray-400 text-lg mb-8 max-w-lg mx-auto">
-            Lorem Upsom
+            Lorem ipsum is a dummy or placeholder text commonly used in graphic
+            design, publishing, and web development. Its purpose is to permit a
+            page layout to be designed, independently of the copy that will
+            subsequen
           </p>
           <div className="flex justify-center space-x-4">
             <a
