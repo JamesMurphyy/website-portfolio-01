@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import {
   AtSymbolIcon,
   InboxArrowDownIcon,
@@ -6,17 +6,62 @@ import {
 } from "@heroicons/react/24/solid";
 
 export const Navbar = ({ menuOpen, setMenuOpen }) => {
+  const [colour, setColour] = useState(false);
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
   }, [menuOpen]);
+  const changeColour = () => {
+    if (window.scrollY >= 1000) {
+      setColour(true);
+    } else {
+      setColour(false);
+    }
+  };
+  useEffect(() => {
+    changeColour();
+  }, []);
+  // listenScrollEvent = (e) => {
+  //   if (window.scrollY >= 90) {
+  //     setColour(window.scrollY);
+  //   } else {
+  //     setColour(0);
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   let header = document.getElementById("header");
+  //   window.addEventListener("scroll", () => {
+  //     if (window.scrollY >= 1000) {
+  //       setColour(`bg-[rgba(27,27,27,${window.scrollY})]`);
+  //     } else {
+  //       setColour("bg-[rgba(236, 226, 217, 0.9)]");
+  //     }
+  //     console.log("test", colour);
+  //   });
+  // });
+  window.addEventListener("scroll", changeColour);
+  // console.log("colour", colour);
   return (
-    <nav className="fixed top-0 w-full z-40 bg-[rgb(255,255,255)] backdrop-blur-lg border-b border-white/10 shadow-lg">
+    <nav
+      id="header"
+      className={`fixed top-0 w-full z-40 bg-[rgba(236, 226, 217, 0.9)] backdrop-blur-lg border-b border-white/10 shadow-lg`}
+    >
       {" "}
       <div className="max-w-400 mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          <a href="#home" className="font-sans text-3xl font-bold text-black">
-            {" "}
-            Debby <span className="text-black">Murphy</span>
+          <a
+            href="#home"
+            className={`font-sans text-4xl font-bold ${
+              colour
+                ? "text-black text-shadow-regal-blue text-shadow-lg"
+                : "text-white text-shadow-regal-blue text-shadow-lg/30"
+            }`}
+          >
+            Debra
+            <span className={`${colour ? "text-black" : "text-white"}`}>
+              {" "}
+              Murphy
+            </span>
           </a>
           <div
             className="w-7 h-5 relative cursor-pointer z-40 md:hidden"
@@ -27,29 +72,41 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
           <div className="hidden md:flex items-center space-x-8">
             <a
               href="#home"
-              className="text-gray-600 hover:text-black transition-colors delay-100 duration-200 ease-in-out"
+              className={`${
+                colour ? "text-black" : "text-white"
+              } hover:text-black transition-colors delay-100 duration-200 ease-in-out`}
             >
               Home
             </a>
             <a
               href="#about"
-              className="text-gray-600 hover:text-black transition-colors delay-100 duration-200 ease-in-out"
+              className={`${
+                colour ? "text-black" : "text-white"
+              } hover:text-black transition-colors delay-100 duration-200 ease-in-out`}
             >
               About
             </a>
             <a
               href="#projects"
-              className="text-gray-600 hover:text-black transition-colors delay-100 duration-200 ease-in-out"
+              className={`${
+                colour ? "text-black" : "text-white"
+              } hover:text-black transition-colors delay-100 duration-200 ease-in-out`}
             >
               Projects
             </a>
             <a
               href="#contact"
-              className="text-gray-600 hover:text-black transition-colors delay-100 duration-200 ease-in-out"
+              className={`${
+                colour ? "text-black" : "text-white"
+              } hover:text-black transition-colors delay-100 duration-200 ease-in-out`}
             >
               Contact
             </a>
-            <a className="text-black text-sm">
+            <a
+              className={`${
+                colour ? "text-black" : "text-shadow-gray-400"
+              } text-sm`}
+            >
               <div>
                 <span>
                   {/* <AtSymbolIcon className="h-5 w-5 inline-flex pr-1 mb-1" /> */}
