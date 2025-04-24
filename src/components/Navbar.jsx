@@ -20,27 +20,8 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
   useEffect(() => {
     changeColour();
   }, []);
-  // listenScrollEvent = (e) => {
-  //   if (window.scrollY >= 90) {
-  //     setColour(window.scrollY);
-  //   } else {
-  //     setColour(0);
-  //   }
-  // };
 
-  // useEffect(() => {
-  //   let header = document.getElementById("header");
-  //   window.addEventListener("scroll", () => {
-  //     if (window.scrollY >= 1000) {
-  //       setColour(`bg-[rgba(27,27,27,${window.scrollY})]`);
-  //     } else {
-  //       setColour("bg-[rgba(236, 226, 217, 0.9)]");
-  //     }
-  //     console.log("test", colour);
-  //   });
-  // });
   window.addEventListener("scroll", changeColour);
-  // console.log("colour", colour);
   return (
     <nav
       id="header"
