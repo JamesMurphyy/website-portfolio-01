@@ -2,14 +2,14 @@ import { RevealOnScroll } from "../RevealOnScroll";
 
 export const Testimonials = () => {
   return (
-    // <section class="py-12 text-blue-900 sm:py-16 lg:py-20">
+    // <section className="py-12 text-blue-900 sm:py-16 lg:py-20">
     <section
-      id="#testimonials"
+      id="testimonials"
       className="min-h-screen flex items-center justify-center -mt-40"
     >
       <RevealOnScroll>
-        <div class="relative mx-auto max-w-screen-lg px-4 sm:px-6 lg:px-8">
-          <span class="hidden sm:block -z-10 absolute -left-35 opacity-20 -top-5 rounded-full  bg-blue-700 p-6 text-9xl text-white">
+        <div className="relative mx-auto max-w-screen-lg px-4 sm:px-6 lg:px-8">
+          <span className="hidden sm:block -z-10 absolute -left-35 opacity-20 -top-5 rounded-full  bg-blue-700 p-6 text-9xl text-white">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               aria-hidden="true"
@@ -25,7 +25,7 @@ export const Testimonials = () => {
               />
             </svg>
           </span>
-          <span class="hidden sm:block -z-10 absolute -right-35 opacity-20 -bottom-50 rounded-full  bg-blue-700 p-6 text-9xl text-white">
+          <span className="hidden sm:block -z-10 absolute -right-35 opacity-20 -bottom-50 rounded-full  bg-blue-700 p-6 text-9xl text-white">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               aria-hidden="true"
@@ -42,32 +42,32 @@ export const Testimonials = () => {
             </svg>
           </span>
 
-          <div class="flex flex-col items-center">
-            <div class="text-center">
-              <p class="text-lg font-medium text-indigo-600">
+          <div className="flex flex-col items-center">
+            <div className="text-center">
+              <p className="text-lg font-medium text-indigo-600">
                 What Clients Say About Working With Me
               </p>
-              <h2 class="mt-4 text-3xl font-bold text-black sm:text-4xl xl:text-5xl">
+              <h2 className="mt-4 text-3xl font-bold text-black sm:text-4xl xl:text-5xl">
                 Client Testimonials
               </h2>
             </div>
 
-            {/* <div class="order-3 mt-8 text-center md:mt-16">
-              <button class="mb-20 rounded-lg border-2 border-blue-700 bg-blue-700 px-6 py-2 font-medium text-white transition hover:translate-y-1">
+            {/* <div className="order-3 mt-8 text-center md:mt-16">
+              <button className="mb-20 rounded-lg border-2 border-blue-700 bg-blue-700 px-6 py-2 font-medium text-white transition hover:translate-y-1">
                 More reviews on TrustPilot
               </button>
             </div> */}
 
-            <div class="relative mx-auto mt-20 grid max-w-lg grid-cols-1 gap-6 md:max-w-none md:grid-cols-3 lg:gap-10">
-              <div class="flex flex-col rounded-xl  text-center shadow-xl border-t-4 border-blue-300 shadow-blue-200 bg-white">
-                <div class="flex flex-1 flex-col justify-between p-6 lg:py-7 lg:px-5">
-                  <div class="flex-1">
-                    <p class="border-blue-500 px-10 text-xl text-black">
+            <div className="relative mx-auto mt-20 grid max-w-lg grid-cols-1 gap-6 md:max-w-none md:grid-cols-3 lg:gap-10">
+              <div className="flex flex-col rounded-xl  text-center shadow-xl border-t-4 border-blue-300 shadow-blue-200 bg-white">
+                <div className="flex flex-1 flex-col justify-between p-6 lg:py-7 lg:px-5">
+                  <div className="flex-1">
+                    <p className="border-blue-500 px-10 text-xl text-black">
                       Found my dream home—stress free!
                     </p>
 
-                    <blockquote class="mt-8 flex-1">
-                      <p class="leading-relaxed text-blue-900">
+                    <blockquote className="mt-8 flex-1">
+                      <p className="leading-relaxed text-blue-900">
                         Debby made the whole process seamless. From touring
                         homes to closing, she was always there with honest
                         advice and a positive attitude. I couldn’t have done it
@@ -76,10 +76,10 @@ export const Testimonials = () => {
                     </blockquote>
                   </div>
 
-                  <div class="-mx-5 mt-8 px-8 py-1">
-                    <div class="">
-                      <p class="text-black font-bold">James Khawalski</p>
-                      <p class="mt-0.5 text-sm text-black">
+                  <div className="-mx-5 mt-8 px-8 py-1">
+                    <div>
+                      <p className="text-black font-bold">James Khawalski</p>
+                      <p className="mt-0.5 text-sm text-black">
                         First-Time Homebuyer
                       </p>
                     </div>
@@ -87,15 +87,15 @@ export const Testimonials = () => {
                 </div>
               </div>
 
-              <div class="flex flex-col rounded-xl  text-center shadow-xl border-t-4 border-blue-300 shadow-blue-200 bg-white">
-                <div class="flex flex-1 flex-col justify-between p-6 lg:py-7 lg:px-5">
-                  <div class="flex-1">
-                    <p class="border-blue-500 px-10 text-xl text-black">
+              <div className="flex flex-col rounded-xl  text-center shadow-xl border-t-4 border-blue-300 shadow-blue-200 bg-white">
+                <div className="flex flex-1 flex-col justify-between p-6 lg:py-7 lg:px-5">
+                  <div className="flex-1">
+                    <p className="border-blue-500 px-10 text-xl text-black">
                       Professional, responsive, and incredibly helpful!
                     </p>
 
-                    <blockquote class="mt-8 flex-1">
-                      <p class="leading-relaxed text-blue-900">
+                    <blockquote className="mt-8 flex-1">
+                      <p className="leading-relaxed text-blue-900">
                         Selling my condo felt overwhelming at first, but Debby
                         took care of everything. She staged it beautifully and
                         got me multiple offers above asking!
@@ -103,10 +103,10 @@ export const Testimonials = () => {
                     </blockquote>
                   </div>
 
-                  <div class="-mx-5 mt-8 px-8 py-1">
-                    <div class="">
-                      <p class="text-black font-bold">Jacob Jones</p>
-                      <p class="text-blue-90 mt-0.5 text-sm text-black">
+                  <div className="-mx-5 mt-8 px-8 py-1">
+                    <div>
+                      <p className="text-black font-bold">Jacob Jones</p>
+                      <p className="mt-0.5 text-sm text-black">
                         Condo Seller, Downtown Toronto
                       </p>
                     </div>
@@ -114,15 +114,15 @@ export const Testimonials = () => {
                 </div>
               </div>
 
-              <div class="flex flex-col rounded-xl  text-center shadow-xl border-t-4 border-blue-300 shadow-blue-200 bg-white">
-                <div class="flex flex-1 flex-col justify-between p-6 lg:py-7 lg:px-5">
-                  <div class="flex-1">
-                    <p class="border-blue-500 px-10 text-xl text-black">
+              <div className="flex flex-col rounded-xl  text-center shadow-xl border-t-4 border-blue-300 shadow-blue-200 bg-white">
+                <div className="flex flex-1 flex-col justify-between p-6 lg:py-7 lg:px-5">
+                  <div className="flex-1">
+                    <p className="border-blue-500 px-10 text-xl text-black">
                       She helped us upgrade and invest smart.
                     </p>
 
-                    <blockquote class="mt-8 flex-1">
-                      <p class="leading-relaxed text-blue-900">
+                    <blockquote className="mt-8 flex-1">
+                      <p className="leading-relaxed text-blue-900">
                         We needed to sell our home and find a bigger space for
                         our growing family—Debby guided us through both
                         seamlessly and even helped us invest in a rental
@@ -131,10 +131,10 @@ export const Testimonials = () => {
                     </blockquote>
                   </div>
 
-                  <div class="-mx-5 mt-8 px-8 py-1">
-                    <div class="">
-                      <p class="text-black font-bold">Jenny Wilson</p>
-                      <p class="mt-0.5 text-sm text-black">
+                  <div className="-mx-5 mt-8 px-8 py-1">
+                    <div>
+                      <p className="text-black font-bold">Jenny Wilson</p>
+                      <p className="mt-0.5 text-sm text-black">
                         Homeowner & Investor
                       </p>
                     </div>
