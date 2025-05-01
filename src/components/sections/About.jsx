@@ -150,7 +150,7 @@ export const About = () => {
     // <div className="overflow-hidden bg-white py-24 sm:py-32">
     <section
       id="about"
-      className="relative min-h-screen flex items-center justify-center py-10"
+      className="relative min-h-screen flex items-center justify-center py-10 -mt-20"
     >
       <RevealOnScroll>
         <div className="max-w-7xl px-6 lg:px-8 flex items-center justify-center">
