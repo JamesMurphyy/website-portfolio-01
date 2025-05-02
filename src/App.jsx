@@ -10,6 +10,7 @@ import { Listings } from "./components/sections/Listings";
 import { Contact } from "./components/sections/Contact";
 import { Testimonials } from "./components/sections/Testimonials";
 import Stats from "./components/sections/Stats";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -17,6 +18,7 @@ function App() {
 
   return (
     <>
+      <Toaster position="top-center" true />
       {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />}
       <div
         className={`transition-opacity duration-1000 ease-in-out ${
@@ -25,7 +27,6 @@ function App() {
       >
         <div className="absolute h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]" />
         <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-        {/* <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} /> */}
         <Home />
         <Stats />
         <About />
