@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { InboxArrowDownIcon, PhoneIcon } from "@heroicons/react/24/solid";
 import { AnimatePresence, motion } from "framer-motion";
+import DebraMurphyLogo1Transparent from "../assets/DebraMurphyLogo1Transparent.png";
+import DebraMurphyLogo1TransparentBlack from "../assets/DebraMurphyLogo1TransparentBlack.png";
 
 const navLinks = [
   { id: "home", label: "Home" },
@@ -63,17 +65,27 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4">
-          <div className="flex justify-between items-center h-16">
+          <div className="flex justify-between items-center h-18">
             <a
               href="#home"
               className="flex items-center space-x-2 font-sans text-2xl font-bold tracking-tight"
             >
-              <div className="bg-indigo-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-semibold text-lg">
+              {/* <div className="bg-indigo-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-semibold text-lg">
                 DM
               </div>
               <span>
                 Debra <span className="text-indigo-500">Murphy</span>
-              </span>
+              </span> */}
+              <img
+                src={
+                  colour
+                    ? DebraMurphyLogo1TransparentBlack
+                    : DebraMurphyLogo1Transparent
+                }
+                alt="Debra Murphy Real Estate Logo"
+                // className="h-15 w-auto object-contain rounded-md"
+                className="h-30"
+              />
             </a>
 
             <div
