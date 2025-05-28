@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { InboxArrowDownIcon, PhoneIcon } from "@heroicons/react/24/solid";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import DebraMurphyLogo1Transparent from "../assets/DebraMurphyLogo1Transparent.png";
 import DebraMurphyLogo1TransparentBlack from "../assets/DebraMurphyLogo1TransparentBlack.png";
 
