@@ -5,12 +5,20 @@ import { PropertyCard } from "../PropertyCard";
 
 export const Listings = () => {
   return (
-    <section id="listings" className="flex items-center justify-center">
+    <section
+      id="listings"
+      aria-label="Real estate listings section"
+      className="flex flex-col items-center justify-center px-4 py-20"
+    >
       <RevealOnScroll>
-        <h2 className="flex items-center justify-center mt-35 text-4xl font-bold text-black z-10 sm:text-4xl xl:text-5xl">
+        <h2 className="text-center mt-10 text-4xl font-extrabold text-black sm:text-4xl xl:text-5xl">
           Featured Listings
         </h2>
-        <div className="mt-20 grid flex-wrap max-w-md grid-cols-1 gap-6 px-2 sm:max-w-lg sm:px-20 md:max-w-screen-xl md:grid-cols-2 md:px-10 lg:grid-cols-3 lg:gap-8 z-10">
+
+        <div
+          className="mt-20 grid max-w-screen-xl gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full px-2 sm:px-8 md:px-10"
+          role="list"
+        >
           {propertyList.map((property) => (
             <PropertyCard key={property.id} property={property} />
           ))}
