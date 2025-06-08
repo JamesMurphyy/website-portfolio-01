@@ -37,45 +37,45 @@ export const About = () => {
   return (
     <section
       id="about"
-      className="relative min-h-screen flex items-center justify-center py-10 -mt-20"
+      className="relative py-16 my-14 sm:py-30 sm:my-28 lg:py-34 lg:my-32"
       aria-label="About Debra Murphy - Real Estate Professional"
     >
       <RevealOnScroll>
-        <div className="max-w-7xl px-6 lg:px-8 flex items-center justify-center">
-          <div className="grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-            {/* About Text Content */}
-            <div className="lg:pt-4 lg:pr-8">
-              <div className="lg:max-w-lg">
-                <h2 className="text-base font-semibold text-indigo-600">
-                  Local Knowledge. Real Results.
-                </h2>
-                <p className="mt-2 text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
-                  Meet Debra Murphy
-                </p>
-                <p className="mt-6 text-lg text-gray-600">
-                  Hi, I'm Debra Murphy—a dedicated real estate agent who puts
-                  people first. I take pride in making the buying or selling
-                  process smooth, stress-free, and even enjoyable. Whether
-                  you're a first-time buyer, seasoned investor, or searching for
-                  your forever home, I guide you with local expertise, honest
-                  advice, and a commitment to real results. Let’s turn your real
-                  estate goals into reality.
-                </p>
-              </div>
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+            {/* Left Text Section */}
+            <div>
+              <h2 className="text-sm sm:text-base font-semibold text-indigo-600">
+                Local Knowledge. Real Results.
+              </h2>
+              <p className="mt-2 text-3xl sm:text-4xl font-bold tracking-tight text-gray-900">
+                Meet Debra Murphy
+              </p>
+              <p className="mt-6 text-base sm:text-lg text-gray-700">
+                Hi, I'm Debra Murphy—a dedicated real estate agent who puts
+                people first. I take pride in making the buying or selling
+                process smooth, stress-free, and even enjoyable. Whether you're
+                a first-time buyer, seasoned investor, or searching for your
+                forever home, I guide you with local expertise, honest advice,
+                and a commitment to real results. Let’s turn your real estate
+                goals into reality.
+              </p>
             </div>
 
-            {/* Feature Highlights */}
-            <dl className="mt-10 max-w-xl space-y-8 text-base text-gray-600 lg:max-w-none">
+            {/* Feature List */}
+            <dl className="space-y-8">
               {features.map((feature) => (
-                <div key={feature.name} className="relative pl-9">
-                  <dt className="inline font-semibold text-gray-900">
+                <div key={feature.name} className="relative pl-10">
+                  <dt className="font-semibold text-gray-900 flex items-start gap-3">
                     <feature.icon
                       aria-hidden="true"
-                      className="absolute top-1 left-1 h-5 w-5 text-indigo-600"
+                      className="absolute left-0 top-1 h-6 w-6 text-indigo-600"
                     />
                     {feature.name}
                   </dt>
-                  <dd className="inline"> — {feature.description}</dd>
+                  <dd className="mt-1 text-gray-600 text-sm sm:text-base">
+                    {feature.description}
+                  </dd>
                 </div>
               ))}
             </dl>

@@ -5,14 +5,14 @@ export const Testimonials = () => {
     <section
       id="testimonials"
       aria-label="Client Testimonials"
-      className="min-h-screen flex items-center justify-center -mt-40"
+      className="min-h-screen flex items-center justify-center py-20 px-4 sm:px-6 lg:px-8"
     >
       <RevealOnScroll>
-        <div className="relative mx-auto max-w-screen-lg px-4 sm:px-6 lg:px-8">
+        <div className="relative w-full max-w-screen-xl mx-auto">
           {/* Decorative Quote Icons */}
           <span
             aria-hidden="true"
-            className="hidden sm:block absolute -z-10 -left-35 -top-5 opacity-20 rounded-full bg-blue-700 p-6 text-9xl text-white"
+            className="hidden sm:block absolute -z-10 left-[-4rem] top-[-1.25rem] opacity-20 rounded-full bg-blue-700 p-6 text-9xl text-white"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -20,7 +20,6 @@ export const Testimonials = () => {
               viewBox="0 0 512 512"
               width="1em"
               height="1em"
-              preserveAspectRatio="xMidYMid meet"
             >
               <title>Quote Icon Left</title>
               <path
@@ -32,7 +31,7 @@ export const Testimonials = () => {
 
           <span
             aria-hidden="true"
-            className="hidden sm:block absolute -z-10 -right-35 -bottom-50 opacity-20 rounded-full bg-blue-700 p-6 text-9xl text-white"
+            className="hidden sm:block absolute -z-10 right-[-4rem] bottom-[-12rem] opacity-20 rounded-full bg-blue-700 p-6 text-9xl text-white"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -40,7 +39,6 @@ export const Testimonials = () => {
               viewBox="0 0 512 512"
               width="1em"
               height="1em"
-              preserveAspectRatio="xMidYMid meet"
             >
               <title>Quote Icon Right</title>
               <path
@@ -61,7 +59,7 @@ export const Testimonials = () => {
           </div>
 
           {/* Testimonials */}
-          <div className="relative mx-auto mt-20 grid max-w-lg grid-cols-1 gap-6 md:max-w-none md:grid-cols-3 lg:gap-10">
+          <div className="mt-20 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
             {[
               {
                 name: "James Khawalski",
@@ -88,12 +86,12 @@ export const Testimonials = () => {
               >
                 <div className="flex flex-1 flex-col justify-between p-6 lg:py-7 lg:px-5">
                   <header className="flex-1">
-                    <p className="px-10 text-xl text-black">{title}</p>
-                    <blockquote className="mt-8">
+                    <p className="px-6 sm:px-10 text-xl text-black">{title}</p>
+                    <blockquote className="mt-6 sm:mt-8">
                       <p className="leading-relaxed text-blue-900">{text}</p>
                     </blockquote>
                   </header>
-                  <footer className="mt-8 px-8 py-1">
+                  <footer className="mt-8 px-6 sm:px-8 py-1">
                     <p className="text-black font-bold">{name}</p>
                     <p className="mt-0.5 text-sm text-black">{role}</p>
                   </footer>

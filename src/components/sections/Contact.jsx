@@ -115,19 +115,19 @@ export const Contact = () => {
   return (
     <section
       id="contact"
-      className="min-h-screen bg-white py-20 px-4 flex items-center justify-center"
+      className="min-h-screen bg-white py-16 px-4 md:px-8 lg:px-12 flex items-center justify-center"
     >
       <RevealOnScroll>
         <motion.div
-          className="w-full max-w-3xl p-8 bg-white rounded-xl shadow-xl"
+          className="w-full max-w-4xl p-6 sm:p-8 md:p-10 bg-white rounded-xl shadow-xl"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="text-3xl font-bold text-black text-center mb-6">
+          <h1 className="text-3xl sm:text-4xl font-bold text-black text-center mb-4 sm:mb-6">
             Contact a Real Estate Professional
           </h1>
-          <p className="text-gray-600 text-center mb-10">
+          <p className="text-gray-600 text-center mb-8 sm:mb-10 max-w-2xl mx-auto text-sm sm:text-base">
             Buying, selling, or investing—let's make your property goals a
             reality.
           </p>
@@ -159,7 +159,7 @@ export const Contact = () => {
               name="message"
               value={formData.message}
               onChange={handleChange}
-              placeholder="Tell us more about what you're looking for..."
+              placeholder="Tell me more about what you're looking for..."
               icon={<ChatBubbleLeftIcon className="w-5 h-5 text-gray-700" />}
             />
 
@@ -180,7 +180,7 @@ export const Contact = () => {
               />
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <InputField
                 name="budgetMin"
                 type="number"
@@ -225,7 +225,7 @@ export const Contact = () => {
             <div>
               <label
                 htmlFor="file"
-                className="block text-gray-600 mb-2 text-sm"
+                className="block text-gray-600 mb-2 text-sm font-medium"
               >
                 Attach relevant documents (optional)
               </label>
@@ -234,13 +234,13 @@ export const Contact = () => {
                 name="file"
                 onChange={handleFileChange}
                 accept=".pdf,.jpg,.jpeg,.png"
-                className="file:mr-5 file:py-1 file:px-3 file:border file:rounded-lg file:text-xs file:font-medium file:bg-stone-50 file:text-stone-700 hover:file:bg-blue-50 hover:file:text-indigo-700 w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full file:mr-4 file:py-2 file:px-4 file:border file:rounded-md file:text-sm file:font-medium file:bg-gray-100 file:text-gray-700 hover:file:bg-blue-50 hover:file:text-indigo-600 border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
               />
             </div>
 
             <button
               type="submit"
-              className="w-full bg-indigo-500 hover:bg-indigo-600 transition text-white font-semibold py-3 rounded-md"
+              className="w-full bg-indigo-500 hover:bg-indigo-600 transition text-white font-semibold py-3 rounded-md text-sm sm:text-base"
             >
               Send Message
             </button>

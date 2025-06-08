@@ -66,7 +66,8 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
           aria-label="Main Navigation"
         >
           <div className="max-w-7xl mx-auto px-4">
-            <div className="flex justify-between items-center h-18 py-4">
+            <div className="flex justify-between items-center h-18 py-4 gap-4">
+              {/* Logo */}
               <a
                 href="#home"
                 className="flex items-center font-sans text-2xl font-bold tracking-tight"
@@ -86,7 +87,7 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
               {/* Hamburger for Mobile */}
               <button
                 onClick={() => setMenuOpen((prev) => !prev)}
-                className="md:hidden flex flex-col justify-center w-7 h-5 cursor-pointer z-50"
+                className="lg:hidden flex flex-col justify-center w-7 h-5 cursor-pointer z-50"
                 aria-label="Toggle navigation menu"
               >
                 <span
@@ -107,7 +108,7 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
               </button>
 
               {/* Desktop Nav */}
-              <div className="hidden md:flex items-center space-x-8">
+              <div className="hidden lg:flex items-center justify-end flex-wrap gap-6 md:gap-8 max-w-full truncate">
                 {navLinks.map(({ id, label }) => (
                   <a
                     key={id}
@@ -121,16 +122,23 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
                     {label}
                   </a>
                 ))}
-                <address className="not-italic text-sm -mr-15">
-                  <div>
-                    <InboxArrowDownIcon className="h-5 w-5 inline-flex pr-1 mb-1" />
-                    <a href="mailto:debbymurphyrealestate@gmail.com">
+
+                {/* Contact Info */}
+                <address className="not-italic text-sm max-w-[200px] md:max-w-xs overflow-hidden text-ellipsis whitespace-nowrap">
+                  <div className="flex items-center">
+                    <InboxArrowDownIcon className="h-5 w-5 inline-flex pr-1" />
+                    <a
+                      href="mailto:debbymurphyrealestate@gmail.com"
+                      className="truncate"
+                    >
                       debbymurphyrealestate@gmail.com
                     </a>
                   </div>
-                  <div>
-                    <PhoneIcon className="h-5 w-5 inline-flex pr-1 mb-1" />
-                    <a href="tel:9053081567">(905) - 308 - 1567</a>
+                  <div className="flex items-center">
+                    <PhoneIcon className="h-5 w-5 inline-flex pr-1" />
+                    <a href="tel:9053081567" className="whitespace-nowrap">
+                      (905) - 308 - 1567
+                    </a>
                   </div>
                 </address>
               </div>
@@ -147,18 +155,11 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
             animate={{ height: "100vh", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed top-0 left-0 w-full z-40 flex flex-col items-center justify-center bg-black/90"
+            className="fixed top-0 left-0 w-full z-40 flex flex-col items-center justify-center bg-black/90 px-4"
             role="dialog"
             aria-modal="true"
             aria-label="Mobile Navigation Menu"
           >
-            <button
-              onClick={() => setMenuOpen(false)}
-              className="absolute top-6 right-6 text-white text-3xl focus:outline-none"
-              aria-label="Close menu"
-            >
-              &times;
-            </button>
             {navLinks.map((link, i) => (
               <motion.a
                 key={link.id}
@@ -176,11 +177,23 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
                 {link.label}
               </motion.a>
             ))}
+            {/* Add contact info in mobile view if desired */}
+            <div className="text-white mt-6 text-sm text-center">
+              <div>
+                <InboxArrowDownIcon className="h-4 w-4 inline-flex pr-1" />
+                <a href="mailto:debbymurphyrealestate@gmail.com">
+                  debbymurphyrealestate@gmail.com
+                </a>
+              </div>
+              <div>
+                <PhoneIcon className="h-4 w-4 inline-flex pr-1" />
+                <a href="tel:9053081567">(905) - 308 - 1567</a>
+              </div>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
 
-      {/* Scroll Smooth SEO improvement */}
       <style jsx>{`
         html {
           scroll-behavior: smooth;
