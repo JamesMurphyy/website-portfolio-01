@@ -5,7 +5,7 @@ export const Home = () => {
   return (
     <section
       id="home"
-      className="relative isolate overflow-hidden bg-black min-h-screen px-4 pt-24 sm:px-6 lg:px-8"
+      className="relative isolate overflow-hidden min-h-screen px-4 pt-24 sm:px-6 lg:px-8"
       aria-label="Homepage Hero Section"
     >
       {/* Background Video */}
@@ -14,12 +14,15 @@ export const Home = () => {
         loop
         muted
         playsInline
-        className="absolute inset-0 z-[-1] h-full w-full object-cover opacity-80"
+        className="absolute inset-0 z-[-2] h-full w-full object-cover"
         title="Scenic real estate background"
       >
         <source src={backgroundVideo} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
+
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-black/60 z-[-1]" />
 
       {/* Top Gradient */}
       <div

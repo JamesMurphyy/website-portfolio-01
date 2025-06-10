@@ -37,7 +37,7 @@ export const About = () => {
   return (
     <section
       id="about"
-      className="relative py-16 my-14 sm:py-30 sm:my-28 lg:py-34 lg:my-32"
+      className="relative py-16 my-10 sm:py-10 sm:my-28 lg:py-10 lg:my-32 lg:mb-1"
       aria-label="About Debra Murphy - Real Estate Professional"
     >
       <RevealOnScroll>

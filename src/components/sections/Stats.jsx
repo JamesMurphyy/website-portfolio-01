@@ -13,7 +13,7 @@ export const Stats = () => {
   const [visible, setVisible] = useState(false);
 
   return (
-    <section className="flex justify-center px-4 -mt-10 -mb-10">
+    <section className="flex justify-center px-4 -mt-20 -mb-8">
       <RevealOnScroll setVisible={setVisible}>
         <div className="w-full max-w-5xl rounded-2xl border border-indigo-300 bg-white px-10 py-16 shadow-lg backdrop-blur-md">
           <h2 className="mb-10 text-center text-xl font-semibold text-gray-900">
